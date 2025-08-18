@@ -1,0 +1,111 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.registerBox {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #1d2129;
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form {
+  .arco-form-item {
+    margin-bottom: 20px;
+  }
+
+  .arco-form-item-label {
+    font-weight: 500;
+    color: #4e5969;
+  }
+
+  .arco-input-wrapper {
+    border-radius: 8px;
+    border: 1px solid #e5e6eb;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: #c9cdd4;
+    }
+
+    &:focus-within {
+      border-color: #165dff;
+      box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1);
+    }
+  }
+
+  .arco-btn {
+    height: 44px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+.loginLink {
+  text-align: center;
+  margin-top: 24px;
+  color: #86909c;
+  font-size: 14px;
+
+  a {
+    color: #165dff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #4080ff;
+      text-decoration: underline;
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .registerBox {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
