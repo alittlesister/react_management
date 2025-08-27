@@ -3,7 +3,7 @@ import { Form, Input, Button, Message } from "@arco-design/web-react";
 import { IconUser, IconLock } from "@arco-design/web-react/icon";
 import styles from "./login.less";
 import { validPwd } from "@/regexp";
-import { loginUser, LoginUserData } from "@/services/user";
+import { loginUser, LoginUserData } from "@/api/user";
 
 const FormItem = Form.Item;
 

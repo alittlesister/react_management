@@ -1,11 +1,17 @@
 import React from "react";
 import { Form, Input, Button, Message } from "@arco-design/web-react";
-import { IconUser, IconLock, IconPhone, IconEmail, IconIdcard } from "@arco-design/web-react/icon";
-import { validPwd, validPhone, validEmail } from "@/regexp";
-import { registerUser, RegisterUserData } from "@/services/user";
-import styles from "./register.less";
+import {
+  IconUser,
+  IconLock,
+  IconPhone,
+  IconEmail,
+  IconIdcard,
+} from "@arco-design/web-react/icon";
+import { validPwd, validPhone, validEmail } from "../../utils/regexp";
+import { type RegisterUserData, registerUser } from "../../api/user";
+import styles from "./register.module.less";
 
-const FormItem = Form.Item;
+  const FormItem = Form.Item;
 
 const rules = {
   username: [
@@ -24,7 +30,7 @@ const rules = {
         } else {
           cb(undefined);
         }
-      }
+      },
     },
   ],
   confirmPassword: [
@@ -37,8 +43,8 @@ const rules = {
         } else {
           cb(undefined);
         }
-      }
-    }
+      },
+    },
   ],
   nickname: [
     { required: true, message: "请输入昵称" },
@@ -55,8 +61,8 @@ const rules = {
         } else {
           cb(undefined);
         }
-      }
-    }
+      },
+    },
   ],
   phone: [
     {
@@ -66,9 +72,9 @@ const rules = {
         } else {
           cb(undefined);
         }
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
 
 export default function RegisterPage() {
@@ -76,12 +82,12 @@ export default function RegisterPage() {
 
   // 自定义密码确认验证
   const validateConfirmPassword = (value: string | undefined) => {
-    const password = form.getFieldValue('password');
+    const password = form.getFieldValue("password");
     if (!value) {
-      return '请确认密码';
+      return "请确认密码";
     }
     if (value !== password) {
-      return '两次输入的密码不一致';
+      return "两次输入的密码不一致";
     }
     return undefined;
   };
@@ -89,7 +95,7 @@ export default function RegisterPage() {
   const handleSubmit = async (values: any) => {
     try {
       await form.validate();
-      
+
       // 构建注册数据，符合数据库表结构
       const registerData: RegisterUserData = {
         username: values.username,
@@ -97,17 +103,17 @@ export default function RegisterPage() {
         nickname: values.nickname,
         email: values.email,
         phone: values.phone || null,
-        role_ids: '1', // 默认普通用户角色
+        role_ids: "1", // 默认普通用户角色
         status: 1, // 默认启用状态
         create_time: new Date().toISOString(),
-        create_by: 'system'
+        create_by: "system",
       };
 
       console.log("注册信息:", registerData);
-      
+
       // 调用注册API
       const response: any = await registerUser(registerData);
-      
+
       if (response.success) {
         Message.success("注册成功！");
         form.resetFields();
@@ -133,59 +139,62 @@ export default function RegisterPage() {
           className={styles.form}
         >
           <FormItem field="username" label="用户名" rules={rules.username}>
-            <Input 
-              prefix={<IconUser />} 
-              placeholder="请输入用户名（3-20位字母数字下划线）" 
+            <Input
+              prefix={<IconUser />}
+              placeholder="请输入用户名（3-20位字母数字下划线）"
               maxLength={20}
             />
           </FormItem>
-          
+
           <FormItem field="nickname" label="昵称" rules={rules.nickname}>
-            <Input 
-              prefix={<IconIdcard />} 
-              placeholder="请输入昵称（2-20位）" 
+            <Input
+              prefix={<IconIdcard />}
+              placeholder="请输入昵称（2-20位）"
               maxLength={20}
             />
           </FormItem>
-          
+
           <FormItem field="password" label="密码" rules={rules.password}>
-            <Input.Password 
-              prefix={<IconLock />} 
-              placeholder="请输入密码（至少8位，包含大小写字母、数字和特殊字符）" 
+            <Input.Password
+              prefix={<IconLock />}
+              placeholder="请输入密码（至少8位，包含大小写字母、数字和特殊字符）"
             />
           </FormItem>
-          
-          <FormItem 
-            field="confirmPassword" 
-            label="确认密码" 
+
+          <FormItem
+            field="confirmPassword"
+            label="确认密码"
             rules={[
               { required: true, message: "请确认密码" },
               {
-                validator: (value: string | undefined, cb: (msg?: string) => void) => {
+                validator: (
+                  value: string | undefined,
+                  cb: (msg?: string) => void
+                ) => {
                   const error = validateConfirmPassword(value);
                   cb(error);
-                }
-              }
+                },
+              },
             ]}
           >
-            <Input.Password 
-              prefix={<IconLock />} 
-              placeholder="请再次输入密码" 
+            <Input.Password
+              prefix={<IconLock />}
+              placeholder="请再次输入密码"
             />
           </FormItem>
-          
+
           <FormItem field="email" label="邮箱" rules={rules.email}>
-            <Input 
-              prefix={<IconEmail />} 
-              placeholder="请输入邮箱地址" 
+            <Input
+              prefix={<IconEmail />}
+              placeholder="请输入邮箱地址"
               type="email"
             />
           </FormItem>
-          
+
           <FormItem field="phone" label="手机号（选填）" rules={rules.phone}>
-            <Input 
-              prefix={<IconPhone />} 
-              placeholder="请输入手机号（可选）" 
+            <Input
+              prefix={<IconPhone />}
+              placeholder="请输入手机号（可选）"
               maxLength={11}
             />
           </FormItem>
@@ -195,7 +204,7 @@ export default function RegisterPage() {
               注册
             </Button>
           </FormItem>
-          
+
           <div className={styles.loginLink}>
             已有账号？<a href="/login">立即登录</a>
           </div>
