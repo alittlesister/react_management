@@ -11,7 +11,7 @@ import { validPwd, validPhone, validEmail } from "../../utils/regexp";
 import { type RegisterUserData, registerUser } from "../../api/user";
 import styles from "./register.module.less";
 
-  const FormItem = Form.Item;
+const FormItem = Form.Item;
 
 const rules = {
   username: [
@@ -92,7 +92,7 @@ export default function RegisterPage() {
     return undefined;
   };
 
-  const handleSubmit = async (values: any) => {
+  const handleSubmit = async (values: RegisterUserData) => {
     try {
       await form.validate();
 
@@ -111,20 +111,27 @@ export default function RegisterPage() {
 
       console.log("注册信息:", registerData);
 
-      // 调用注册API
-      const response: any = await registerUser(registerData);
-
-      if (response.success) {
-        Message.success("注册成功！");
-        form.resetFields();
-        // 可以在这里跳转到登录页面
-        // window.location.href = '/login';
-      } else {
-        Message.error("注册失败，请稍后重试");
+      try {
+        // 调用注册API
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const response: any = await registerUser(registerData);
+        console.log(response, "@@@@");
+      } catch (error) {
+        console.error("注册失败:", error);
+        Message.error("注册失败，请检查表单信息");
       }
+
+      // if (response.success) {
+      //   Message.success("注册成功！");
+      //   form.resetFields();
+      //   // 可以在这里跳转到登录页面
+      //   // window.location.href = '/login';
+      // } else {
+      //   Message.error("注册失败，请稍后重试");
+      // }
     } catch (error) {
       console.error("注册失败:", error);
-      Message.error("注册失败，请检查表单信息");
+      // Message.error("注册失败，请检查表单信息");
     }
   };
 

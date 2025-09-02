@@ -10,16 +10,16 @@ importers:
     dependencies:
       '@arco-design/web-react':
         specifier: ^2.66.5
-        version: 2.66.5(@types/react@19.1.11)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        version: 2.66.5(@types/react@19.1.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@reduxjs/toolkit':
         specifier: ^2.8.2
-        version: 2.8.2(react-redux@9.2.0(@types/react@19.1.11)(react@19.1.1)(redux@5.0.1))(react@19.1.1)
+        version: 2.8.2(react-redux@9.2.0(@types/react@19.1.11)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
       '@tanstack/react-query':
         specifier: ^5.85.5
-        version: 5.85.5(react@19.1.1)
+        version: 5.85.5(react@18.3.1)
       '@tanstack/react-router':
         specifier: ^1.131.28
-        version: 1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        version: 1.131.28(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       axios:
         specifier: ^1.11.0
         version: 1.11.0
@@ -27,17 +27,17 @@ importers:
         specifier: link:@arco-design/web-react/icon
         version: link:@arco-design/web-react/icon
       react:
-        specifier: ^19.1.1
-        version: 19.1.1
+        specifier: ^18.3.1
+        version: 18.3.1
       react-dom:
-        specifier: ^19.1.1
-        version: 19.1.1(react@19.1.1)
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
       react-hook-form:
         specifier: ^7.62.0
-        version: 7.62.0(react@19.1.1)
+        version: 7.62.0(react@18.3.1)
       react-redux:
         specifier: ^9.2.0
-        version: 9.2.0(@types/react@19.1.11)(react@19.1.1)(redux@5.0.1)
+        version: 9.2.0(@types/react@19.1.11)(react@18.3.1)(redux@5.0.1)
       zod:
         specifier: ^4.1.3
         version: 4.1.3
@@ -793,8 +793,8 @@ packages:
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
-  dayjs@1.11.14:
-    resolution: {integrity: sha512-E8fIdSxUlyqSA8XYGnNa3IkIzxtEmFjI+JU/6ic0P1zmSqyL6HyG5jHnpPjRguDNiaHLpfvHKWFiohNsJLqcJQ==}
+  dayjs@1.11.15:
+    resolution: {integrity: sha512-MC+DfnSWiM9APs7fpiurHGCoeIx0Gdl6QZBy+5lu8MbYKN5FZEXqOgrundfibdfhGZ15o9hzmZ2xJjZnbvgKXQ==}
 
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
@@ -1276,10 +1276,10 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
 
-  react-dom@19.1.1:
-    resolution: {integrity: sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw==}
+  react-dom@18.3.1:
+    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
-      react: ^19.1.1
+      react: ^18.3.1
 
   react-focus-lock@2.13.6:
     resolution: {integrity: sha512-ehylFFWyYtBKXjAO9+3v8d0i+cnc1trGS0vlTGhzFW1vbFXVUTmR8s2tt/ZQG8x5hElg6rhENlLG1H3EZK0Llg==}
@@ -1324,8 +1324,8 @@ packages:
       react: '>=16.6.0'
       react-dom: '>=16.6.0'
 
-  react@19.1.1:
-    resolution: {integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==}
+  react@18.3.1:
+    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
     engines: {node: '>=0.10.0'}
 
   redux-thunk@3.1.0:
@@ -1364,8 +1364,8 @@ packages:
   sax@1.4.1:
     resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
 
-  scheduler@0.26.0:
-    resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
+  scheduler@0.23.2:
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
 
   scroll-into-view-if-needed@2.2.31:
     resolution: {integrity: sha512-dGCXy99wZQivjmjIqihaBQNjryrz5rueJY7eHfTdyWEiR4ttYpsajb14rn9s5d4DY4EcY6+4+U/maARBXJedkA==}
@@ -1569,21 +1569,21 @@ snapshots:
     dependencies:
       color: 3.2.1
 
-  '@arco-design/web-react@2.66.5(@types/react@19.1.11)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@arco-design/web-react@2.66.5(@types/react@19.1.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@arco-design/color': 0.4.0
       '@babel/runtime': 7.28.3
       b-tween: 0.3.3
       b-validate: 1.5.3
       compute-scroll-into-view: 1.0.20
-      dayjs: 1.11.14
+      dayjs: 1.11.15
       lodash: 4.17.21
       number-precision: 1.6.0
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
-      react-focus-lock: 2.13.6(@types/react@19.1.11)(react@19.1.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-focus-lock: 2.13.6(@types/react@19.1.11)(react@18.3.1)
       react-is: 18.3.1
-      react-transition-group: 4.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      react-transition-group: 4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       resize-observer-polyfill: 1.5.1
       scroll-into-view-if-needed: 2.2.31
       shallowequal: 1.1.0
@@ -1865,7 +1865,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
 
-  '@reduxjs/toolkit@2.8.2(react-redux@9.2.0(@types/react@19.1.11)(react@19.1.1)(redux@5.0.1))(react@19.1.1)':
+  '@reduxjs/toolkit@2.8.2(react-redux@9.2.0(@types/react@19.1.11)(react@18.3.1)(redux@5.0.1))(react@18.3.1)':
     dependencies:
       '@standard-schema/spec': 1.0.0
       '@standard-schema/utils': 0.3.0
@@ -1874,8 +1874,8 @@ snapshots:
       redux-thunk: 3.1.0(redux@5.0.1)
       reselect: 5.1.1
     optionalDependencies:
-      react: 19.1.1
-      react-redux: 9.2.0(@types/react@19.1.11)(react@19.1.1)(redux@5.0.1)
+      react: 18.3.1
+      react-redux: 9.2.0(@types/react@19.1.11)(react@18.3.1)(redux@5.0.1)
 
   '@rolldown/pluginutils@1.0.0-beta.32': {}
 
@@ -1947,28 +1947,28 @@ snapshots:
 
   '@tanstack/query-core@5.85.5': {}
 
-  '@tanstack/react-query@5.85.5(react@19.1.1)':
+  '@tanstack/react-query@5.85.5(react@18.3.1)':
     dependencies:
       '@tanstack/query-core': 5.85.5
-      react: 19.1.1
+      react: 18.3.1
 
-  '@tanstack/react-router@1.131.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@tanstack/react-router@1.131.28(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@tanstack/history': 1.131.2
-      '@tanstack/react-store': 0.7.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@tanstack/react-store': 0.7.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/router-core': 1.131.28
       isbot: 5.1.30
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
 
-  '@tanstack/react-store@0.7.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@tanstack/react-store@0.7.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@tanstack/store': 0.7.4
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
-      use-sync-external-store: 1.5.0(react@19.1.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      use-sync-external-store: 1.5.0(react@18.3.1)
 
   '@tanstack/router-core@1.131.28':
     dependencies:
@@ -2241,7 +2241,7 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  dayjs@1.11.14: {}
+  dayjs@1.11.15: {}
 
   debug@4.4.1:
     dependencies:
@@ -2707,57 +2707,60 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-clientside-effect@1.2.8(react@19.1.1):
+  react-clientside-effect@1.2.8(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.28.3
-      react: 19.1.1
+      react: 18.3.1
 
-  react-dom@19.1.1(react@19.1.1):
+  react-dom@18.3.1(react@18.3.1):
     dependencies:
-      react: 19.1.1
-      scheduler: 0.26.0
+      loose-envify: 1.4.0
+      react: 18.3.1
+      scheduler: 0.23.2
 
-  react-focus-lock@2.13.6(@types/react@19.1.11)(react@19.1.1):
+  react-focus-lock@2.13.6(@types/react@19.1.11)(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.28.3
       focus-lock: 1.3.6
       prop-types: 15.8.1
-      react: 19.1.1
-      react-clientside-effect: 1.2.8(react@19.1.1)
-      use-callback-ref: 1.3.3(@types/react@19.1.11)(react@19.1.1)
-      use-sidecar: 1.1.3(@types/react@19.1.11)(react@19.1.1)
+      react: 18.3.1
+      react-clientside-effect: 1.2.8(react@18.3.1)
+      use-callback-ref: 1.3.3(@types/react@19.1.11)(react@18.3.1)
+      use-sidecar: 1.1.3(@types/react@19.1.11)(react@18.3.1)
     optionalDependencies:
       '@types/react': 19.1.11
 
-  react-hook-form@7.62.0(react@19.1.1):
+  react-hook-form@7.62.0(react@18.3.1):
     dependencies:
-      react: 19.1.1
+      react: 18.3.1
 
   react-is@16.13.1: {}
 
   react-is@18.3.1: {}
 
-  react-redux@9.2.0(@types/react@19.1.11)(react@19.1.1)(redux@5.0.1):
+  react-redux@9.2.0(@types/react@19.1.11)(react@18.3.1)(redux@5.0.1):
     dependencies:
       '@types/use-sync-external-store': 0.0.6
-      react: 19.1.1
-      use-sync-external-store: 1.5.0(react@19.1.1)
+      react: 18.3.1
+      use-sync-external-store: 1.5.0(react@18.3.1)
     optionalDependencies:
       '@types/react': 19.1.11
       redux: 5.0.1
 
   react-refresh@0.17.0: {}
 
-  react-transition-group@4.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+  react-transition-group@4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.28.3
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  react@19.1.1: {}
+  react@18.3.1:
+    dependencies:
+      loose-envify: 1.4.0
 
   redux-thunk@3.1.0(redux@5.0.1):
     dependencies:
@@ -2809,7 +2812,9 @@ snapshots:
   sax@1.4.1:
     optional: true
 
-  scheduler@0.26.0: {}
+  scheduler@0.23.2:
+    dependencies:
+      loose-envify: 1.4.0
 
   scroll-into-view-if-needed@2.2.31:
     dependencies:
@@ -2899,24 +2904,24 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  use-callback-ref@1.3.3(@types/react@19.1.11)(react@19.1.1):
+  use-callback-ref@1.3.3(@types/react@19.1.11)(react@18.3.1):
     dependencies:
-      react: 19.1.1
+      react: 18.3.1
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.1.11
 
-  use-sidecar@1.1.3(@types/react@19.1.11)(react@19.1.1):
+  use-sidecar@1.1.3(@types/react@19.1.11)(react@18.3.1):
     dependencies:
       detect-node-es: 1.1.0
-      react: 19.1.1
+      react: 18.3.1
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 19.1.11
 
-  use-sync-external-store@1.5.0(react@19.1.1):
+  use-sync-external-store@1.5.0(react@18.3.1):
     dependencies:
-      react: 19.1.1
+      react: 18.3.1
 
   vite@7.1.3(@types/node@24.3.0)(less@4.4.1):
     dependencies:

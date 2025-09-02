@@ -1,4 +1,4 @@
-import axios from "axios";
+import request from "@/utils/request";
 
 // 注册用户接口
 export interface RegisterUserData {
@@ -13,7 +13,7 @@ export interface RegisterUserData {
   create_by?: string;
 }
 export const registerUser = (data: RegisterUserData) => {
-  return axios.post("/api/users/register", data);
+  return request.post("/users/register", data);
 };
 
 // 登录用户接口
@@ -29,6 +29,6 @@ export interface LoginUserData {
     create_by?: string;
   }
   export const loginUser = (data: LoginUserData) => {
-    return axios.post("/api/users/login", data);
+    return request.post("/users/login", data);
   };
   
